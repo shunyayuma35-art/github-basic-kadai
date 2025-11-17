@@ -1,0 +1,693 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "gpuType": "T4",
+      "authorship_tag": "ABX9TyNjjzc0YuE8WssjD5ZdCocz",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "accelerator": "GPU"
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/Untitled0.ipynb%E9%96%A2%E6%95%B0%E3%81%AE%E5%BC%95%E6%95%B0%E3%83%BB%E6%88%BB%E3%82%8A%E5%80%A4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FlajLwK9CfxQ",
+        "outputId": "639c6cbc-0bdd-427d-8805-41644958357a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "1700円\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(1+2)# 与えられた引数$priceに送料を加算し、その値を出力する関数を定義する\n",
+        "def calculate_total(price):\n",
+        "    # 与えられた引数priceに送料を加算し、変数totalに代入する\n",
+        "    total = price + 500\n",
+        "\n",
+        "    # 変数totalの値を出力する\n",
+        "    print(f\"{total}円\")\n",
+        "\n",
+        "# 関数を呼び出し、引数として購入金額を渡す\n",
+        "calculate_total(1200)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def add_two_arguments(price, shipping_fee):\n",
+        "    # 与えられた引数priceと引数shipping_feeを加算し、変数totalに代入する\n",
+        "    total = price + shipping_fee\n",
+        "\n",
+        "    # 変数$totalの値を出力する\n",
+        "    print(f\"{total}円\")\n",
+        "\n",
+        "# 関数を呼び出し、引数として購入金額と送料を渡す\n",
+        "add_two_arguments(1200, 500)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mVyU5_qHvt7g",
+        "outputId": "00607fe2-742e-45b2-b23b-fd27db4973f5"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1700円\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet_user(user_name: str) -> str:\n",
+        "    if user_name == \"\":\n",
+        "        return \"こんにちは、ゲストさん！\"\n",
+        "    else:\n",
+        "        return f\"こんにちは、{user_name}さん！\"\n",
+        "\n",
+        "# 実行例\n",
+        "print(greet_user(\"太郎\"))   # こんにちは、太郎さん！\n",
+        "print(greet_user(\"\"))      # こんにちは、ゲストさん！"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3lwB6ZBgwnwU",
+        "outputId": "4c76df86-6f97-453f-96c1-775811ac1cc7"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "こんにちは、太郎さん！\n",
+            "こんにちは、ゲストさん！\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(45+18)\n",
+        "print(30-12)\n",
+        "print(15*6)\n",
+        "print(30/3)\n",
+        "print(45&8)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KBQ7Mx6XES02",
+        "outputId": "9444a317-4edf-487b-ed50-d6efb25137b9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "63\n",
+            "18\n",
+            "90\n",
+            "10.0\n",
+            "8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "array = [\"水\",\"金\",\"地\",\"火\",\"木\",\"土\",\"天\",\"海\",\"冥\"]\n",
+        "\n",
+        "# forループで表示\n",
+        "for i, planet in enumerate(array, start=1):\n",
+        "    print(i, planet)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4WcNQ1K7pLGV",
+        "outputId": "0be8a3e2-eac4-4bb8-ca8b-0770f5a27769"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 水\n",
+            "2 金\n",
+            "3 地\n",
+            "4 火\n",
+            "5 木\n",
+            "6 土\n",
+            "7 天\n",
+            "8 海\n",
+            "9 冥\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "YMSJnSifmybX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "sCPSwxA2-N6M"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user_names = [\"侍太郎\", \"侍一郎\", \"侍二郎\", \"侍三郎\", \"侍四郎\"]\n",
+        "\n",
+        "print(user_names[1]) # 2番目の要素だけを表示\n",
+        "\n",
+        "user_names[1] = \"侍花子\" # 2番目の要素を更新\n",
+        "print(user_names)\n",
+        "\n",
+        "user_names.append(\"侍五郎\") # 6番目の要素を追加\n",
+        "print(user_names)\n",
+        "\n",
+        "user_names.pop(2) # 3番目の要素を削除（0始まりのため2を指定）\n",
+        "print(user_names)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_ua3LXgG-Ri4",
+        "outputId": "a6d0c28c-a77a-4c12-deee-8c0dd98573b8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "侍一郎\n",
+            "['侍太郎', '侍花子', '侍二郎', '侍三郎', '侍四郎']\n",
+            "['侍太郎', '侍花子', '侍二郎', '侍三郎', '侍四郎', '侍五郎']\n",
+            "['侍太郎', '侍花子', '侍三郎', '侍四郎', '侍五郎']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "country_names = (\"日本\", \"アメリカ\", \"イギリス\", \"フランス\" )\n",
+        "\n",
+        "# 3番目の要素である「イギリス」という文字列だけを取り出す\n",
+        "print(country_names[2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IadODjOW-lFX",
+        "outputId": "9b1f3ed2-a404-44db-ffdf-4245cb3bd1dc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "イギリス\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "country_names = (\"日本\", \"アメリカ\", \"イギリス\", \"フランス\" )\n",
+        "\n",
+        "# 3番目の要素を取り出す\n",
+        "print(country_names[2])\n",
+        "\n",
+        "# すべての要素を取り出す\n",
+        "print(country_names)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t9cfkBEc_LVw",
+        "outputId": "15b0353f-a831-4ba6-b2a1-4ec39751a511"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "イギリス\n",
+            "('日本', 'アメリカ', 'イギリス', 'フランス')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "country_names = {\"アメリカ\", \"イギリス\", \"日本\", \"フランス\"}\n",
+        "\n",
+        "# セット全体を表示\n",
+        "print(country_names)\n",
+        "\n",
+        "country_names.add(\"ドイツ\") # 「ドイツ」をセットに追加\n",
+        "print(country_names)\n",
+        "\n",
+        "country_names.remove(\"イギリス\") # セットから「イギリス」を削除\n",
+        "print(country_names)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q3hpia_t_iHc",
+        "outputId": "4e4f5fdc-22b5-45bf-949b-89e9291e57a7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'アメリカ', 'フランス', '日本', 'イギリス'}\n",
+            "{'ドイツ', 'アメリカ', 'フランス', '日本', 'イギリス'}\n",
+            "{'ドイツ', 'アメリカ', 'フランス', '日本'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers = [1, 2, 3, 4, 5]\n",
+        "numbers[2] = 10\n",
+        "print(numbers)\n",
+        "numbers.append(6)\n",
+        "print(numbers)\n",
+        "numbers.pop(1)\n",
+        "print(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LWyf3RYz_vnf",
+        "outputId": "018a823c-8cf6-4b7e-c7bd-8f4a086eb066"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 10, 4, 5]\n",
+            "[1, 2, 10, 4, 5, 6]\n",
+            "[1, 10, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tuple_a = (1, 2, 3)\n",
+        "tuple_a[1] = 5\n",
+        "print(tuple_a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 243
+        },
+        "id": "dCxOKMVeABl0",
+        "outputId": "ab4d2ec2-8b1f-42b3-a89c-09f4d8f7df77"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-2557616960.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mtuple_a\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m2\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m3\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mtuple_a\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m5\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtuple_a\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "set_a = {2, 5, 3, 5, 7, 3}\n",
+        "print(set_a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a8Vp25n-AM2b",
+        "outputId": "c4e39d55-0288-4bec-9fe4-3150a6496300"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{2, 3, 5, 7}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 連想配列を作成\n",
+        "personal_data = {\"name\": \"侍太郎\", \"age\": 36, \"gender\": \"男性\"}\n",
+        "\n",
+        "# キー「name」の値を表示\n",
+        "print(personal_data[\"name\"])\n",
+        "\n",
+        "# 連想配列全体を表示\n",
+        "print(personal_data)\n",
+        "\n",
+        "# キー「age」の値を更新\n",
+        "personal_data[\"age\"] = 37\n",
+        "\n",
+        "# 新しく要素（キーと値）を追加\n",
+        "personal_data[\"address\"] = \"東京都\"\n",
+        "\n",
+        "# 連想配列全体を表示\n",
+        "print(personal_data)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dijgBZ0aCqND",
+        "outputId": "71a12c2e-0b77-42a4-c841-bbdc98d837aa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "侍太郎\n",
+            "{'name': '侍太郎', 'age': 36, 'gender': '男性'}\n",
+            "{'name': '侍太郎', 'age': 37, 'gender': '男性', 'address': '東京都'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(45+1.8)\n",
+        "print(3-1.2)\n",
+        "print(15*0.6)\n",
+        "print(3/0.3)\n",
+        "print(45%0.8)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q8SXfcB_Jk6P",
+        "outputId": "9a56816e-f8a6-4ab2-8051-ed8b02451e96"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "46.8\n",
+            "1.8\n",
+            "9.0\n",
+            "10.0\n",
+            "0.1999999999999975\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"今日の天気は\" + \"晴れ\")\n",
+        "print(\"今日の天気は\" \"曇り\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ht50vs4OKNhm",
+        "outputId": "e18b8b87-a4c1-410c-996e-028d50e65801"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "今日の天気は晴れ\n",
+            "今日の天気は曇り\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "bIBSUa1BLKFu"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "FcB7k095RgvB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"降水確率\" + str(50) + \"％\" )"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9KhgbQGJLNTP",
+        "outputId": "cdd5551c-c53d-421f-c310-efa881e7b393"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "降水確率50％\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"晴れ\" * 5)\n",
+        "print(\"晴れ\" + \"晴れ\" + \"晴れ\" + \"晴れ\" + \"晴れ\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R81XbkQgPNgH",
+        "outputId": "e0c2b094-1540-4b98-eb4a-088a9cf887c4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "晴れ晴れ晴れ晴れ晴れ\n",
+            "晴れ晴れ晴れ晴れ晴れ\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user_name = \"侍太郎\"\n",
+        "print(user_name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "40EFu8c7QwuV",
+        "outputId": "bd96a709-12c6-4977-8e8f-2aae968e5404"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "侍太郎\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user_name = \"侍太郎\"\n",
+        "print(user_name)\n",
+        "\n",
+        "user_name = \"侍花子\"\n",
+        "print(user_name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MK3lSQmmSDEk",
+        "outputId": "43e6efb5-8b6b-4935-96a9-3198abcf1268"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "侍太郎\n",
+            "侍花子\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 整数型と浮動小数点型の足し算\n",
+        "number1 = 5\n",
+        "number2 = 2.5\n",
+        "print(number1 + number2)\n",
+        "\n",
+        "# 文字列型と文字列型の連結\n",
+        "last_name  = \"侍\"\n",
+        "first_name = \"太郎\"\n",
+        "print(last_name + first_name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "le-ZY5qXSMW3",
+        "outputId": "c9c7a3a3-ef56-4a94-ed38-e3474a284236"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7.5\n",
+            "侍太郎\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "last_name   = \"侍\"\n",
+        "first_name  = \"太郎\"\n",
+        "sister_name = \"花子\"\n",
+        "\n",
+        "# 3つの変数を文字列内に埋め込んで表示\n",
+        "print(f\"私の名前は{last_name}{first_name}です。妹の名前は{sister_name}です。\")\n"
+      ],
+      "metadata": {
+        "id": "8ggKR9ekSZbX",
+        "outputId": "dcdb65c6-1254-43a8-a3c8-d7b967add35b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "私の名前は侍太郎です。妹の名前は花子です。\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

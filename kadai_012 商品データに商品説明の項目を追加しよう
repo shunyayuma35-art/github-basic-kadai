@@ -1,0 +1,108 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMiurAcjYFDvSTU5fRjuoVa",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_012%20%E5%95%86%E5%93%81%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E5%95%86%E5%93%81%E8%AA%AC%E6%98%8E%E3%81%AE%E9%A0%85%E7%9B%AE%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%97%E3%82%88%E3%81%86\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "<!-- crud/templates/crud/product_detail.html -->\n",
+        "<h1>商品詳細</h1>\n",
+        "\n",
+        "<p><strong>商品名:</strong> {{ product.name }}</p>\n",
+        "<p><strong>価格:</strong> {{ product.price }} 円</p>\n",
+        "<p><strong>在庫:</strong> {{ product.stock }}</p>\n",
+        "<p><strong>カテゴリ:</strong> {{ product.category.name }}</p>\n",
+        "\n",
+        "{% if product.image %}\n",
+        "<p><img src=\"{{ product.image.url }}\" alt=\"{{ product.name }}\" width=\"200\"></p>\n",
+        "{% endif %}\n",
+        "\n",
+        "{% if product.description %}\n",
+        "<p><strong>商品詳細説明:</strong> {{ product.description }}</p>\n",
+        "{% else %}\n",
+        "<p><em>商品説明はありません。</em></p>\n",
+        "{% endif %}\n",
+        "\n",
+        "<p><a href=\"{% url 'product_list' %}\">一覧に戻る</a></p>"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 112
+        },
+        "id": "STafFibeRfoS",
+        "outputId": "32fd0f51-e233-4230-e325-7a047e69b1cb"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid character '。' (U+3002) (ipython-input-2247143036.py, line 16)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-2247143036.py\"\u001b[0;36m, line \u001b[0;32m16\u001b[0m\n\u001b[0;31m    <p><em>商品説明はありません。</em></p>\u001b[0m\n\u001b[0m                     ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid character '。' (U+3002)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "python manage.py makemigrations\n",
+        "python manage.py migrate"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 112
+        },
+        "id": "WiPNaIgvR3zD",
+        "outputId": "f6fb1586-64c5-4703-f51b-4d0329ba2a3e"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (ipython-input-896844699.py, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-896844699.py\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    python manage.py makemigrations\u001b[0m\n\u001b[0m           ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "2oTCgv1NSIIj"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}

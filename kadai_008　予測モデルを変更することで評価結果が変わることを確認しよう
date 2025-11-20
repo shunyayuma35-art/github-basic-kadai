@@ -1,0 +1,78 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNUbm/tAfW/Ml3MtJmj8EYu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_008%E3%80%80%E4%BA%88%E6%B8%AC%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A7%E8%A9%95%E4%BE%A1%E7%B5%90%E6%9E%9C%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Step1. ライブラリのインポート\n",
+        "from sklearn.datasets import load_iris\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "from sklearn.ensemble import RandomForestClassifier  # 決定木からランダムフォレストに変更\n",
+        "from sklearn.metrics import accuracy_score\n",
+        "\n",
+        "# Step2. データの取得\n",
+        "iris = load_iris()\n",
+        "X = iris.data\n",
+        "y = iris.target\n",
+        "\n",
+        "# Step3. データの分割\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=3)\n",
+        "\n",
+        "# Step4. 予測モデルのインスタンス化（ランダムフォレスト）\n",
+        "model = RandomForestClassifier(random_state=3)\n",
+        "\n",
+        "# Step5. 予測モデルの学習\n",
+        "model.fit(X_train, y_train)\n",
+        "\n",
+        "# Step6. 予測\n",
+        "y_pred = model.predict(X_test)\n",
+        "\n",
+        "# Step7. 評価（正解率を表示）\n",
+        "accuracy = accuracy_score(y_test, y_pred)\n",
+        "print(f\"ランダムフォレストでの正解率: {accuracy:.3f}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WdqErlMtPUg0",
+        "outputId": "1054792c-6491-4378-b20c-3aabe03cdcca"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ランダムフォレストでの正解率: 0.978\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNdDwr2ThxsI4Tf+/PYCv6c",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_002%E3%80%8Cnatural-language-basic-kadai%E3%80%8D%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0%E3%81%97%E3%81%9F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%81%AE%E5%89%8D%E5%87%A6%E7%90%86%E3%82%92%E3%81%97%E3%82%88%E3%81%86\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# -*- coding: utf-8 -*-\n",
+        "import requests\n",
+        "from bs4 import BeautifulSoup\n",
+        "import re\n",
+        "\n",
+        "# Step1. スクレイピング\n",
+        "url = \"https://www.aozora.gr.jp/cards/000148/files/2371_13943.html\"\n",
+        "response = requests.get(url)\n",
+        "response.encoding = response.apparent_encoding  # 文字化け対策\n",
+        "\n",
+        "soup = BeautifulSoup(response.text, \"html.parser\")\n",
+        "\n",
+        "# 本文部分を取得\n",
+        "# 青空文庫の本文は <div class=\"main_text\"> にあることが多い\n",
+        "# 今回は body 内のテキスト全体から前後の不要部分を削除\n",
+        "text = soup.get_text()\n",
+        "\n",
+        "# Step2. HTMLタグや不要な文字列の削除\n",
+        "# 不要な改行・空白を削除\n",
+        "text = re.sub(r'\\r\\n', '', text)\n",
+        "text = re.sub(r'\\n', '', text)\n",
+        "text = re.sub(r' +', ' ', text)\n",
+        "\n",
+        "# 青空文庫の前書きや後書き、注釈などを削除する場合は適宜切り出す\n",
+        "# 今回はサンプルとして、全テキストを取得\n",
+        "print(\"=== 前処理後の本文（冒頭100文字） ===\")\n",
+        "print(text[:100])\n",
+        "\n",
+        "# Step3. 最初の1文を抽出（例: 「近頃は～思っています。」）\n",
+        "# ここでは句点「。」で最初の文を切り出す\n",
+        "first_sentence_match = re.search(r'近頃は.*?。', text)\n",
+        "first_sentence = first_sentence_match.group() if first_sentence_match else \"\"\n",
+        "\n",
+        "print(\"\\n=== 最初の1文 ===\")\n",
+        "print(first_sentence)\n",
+        "\n",
+        "# 品詞ごとに区切る（ここでは手動で簡易的に単語分割）\n",
+        "# 日本語の簡易分割（サンプルとして）\n",
+        "words = re.findall(r'\\w+|[ぁ-んァ-ン一-龥]', first_sentence)\n",
+        "\n",
+        "# ストップワードの例（自分で設定）\n",
+        "stop_words = ['は', 'を', 'が', 'に', 'の', 'と', 'で', 'も', 'です', 'ます']\n",
+        "\n",
+        "# ストップワードを除去\n",
+        "filtered_words = [w for w in words if w not in stop_words]\n",
+        "\n",
+        "print(\"\\n=== ストップワード除去後 ===\")\n",
+        "print(filtered_words)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LlbCWF7NUqzE",
+        "outputId": "3843df7f-7abc-453e-8b32-af71df127717"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== 前処理後の本文（冒頭100文字） ===\n",
+            "夏目漱石 文壇の趨勢文壇の趨勢夏目漱石　近頃は大分方々の雑誌から談話をしろしろと責められて、頭ががらん胴になったから、当分品切れの看板でも懸けたいくらいに思っています。現に今日も一軒断わりました。向後\n",
+            "\n",
+            "=== 最初の1文 ===\n",
+            "近頃は大分方々の雑誌から談話をしろしろと責められて、頭ががらん胴になったから、当分品切れの看板でも懸けたいくらいに思っています。\n",
+            "\n",
+            "=== ストップワード除去後 ===\n",
+            "['近頃は大分方々の雑誌から談話をしろしろと責められて', '頭ががらん胴になったから', '当分品切れの看板でも懸けたいくらいに思っています']\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

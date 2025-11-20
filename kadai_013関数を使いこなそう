@@ -1,0 +1,63 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOuBoBABBVhatSo2X+0X4Y0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_013%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%9D%E3%81%86\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 消費税を加えた価格を計算して返す関数\n",
+        "def add_tax(price, tax_rate):\n",
+        "    # 消費税率は10% → 10 / 100 として計算\n",
+        "    result = price + (price * (tax_rate / 100))\n",
+        "    return result\n",
+        "\n",
+        "# 引数：商品価格110円、消費税10%\n",
+        "total_price = add_tax(110, 10)\n",
+        "\n",
+        "# 計算結果を表示\n",
+        "print(total_price)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Q-c_3SLD9J4",
+        "outputId": "c36d31f7-bd9e-45b3-bb19-448ba8ba7af2"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "121.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

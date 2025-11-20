@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOWP1zh1IWpWSzHTRqAh4mb",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_007\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# リスト（array）\n",
+        "array = [\n",
+        "    \"月曜日は晴れです\",\n",
+        "    \"火曜日は雨です\",\n",
+        "    \"水曜日は晴れです\",\n",
+        "    \"木曜日は晴れです\",\n",
+        "    \"金曜日は曇りです\",\n",
+        "    \"土曜日は曇りのち雨です\",\n",
+        "    \"日曜日は雷雨です\"\n",
+        "]\n",
+        "\n",
+        "# ディクショナリ（dictionary）\n",
+        "dictionary = {\n",
+        "    \"mon\": \"晴れ\",\n",
+        "    \"tue\": \"雨\",\n",
+        "    \"wed\": \"晴れ\",\n",
+        "    \"thu\": \"晴れ\",\n",
+        "    \"fri\": \"曇り\",\n",
+        "    \"sat\": \"曇りのち雨\",\n",
+        "    \"sun\": \"雷雨\"\n",
+        "}\n",
+        "\n",
+        "# リストから水曜日の天気予報を取り出して出力\n",
+        "print(array[2])\n",
+        "\n",
+        "# ディクショナリから水曜日の天気予報を取り出して出力\n",
+        "print(\"水曜日は\" + dictionary[\"wed\"] + \"です\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PpD9zPzC-zte",
+        "outputId": "b52671f7-451a-42fb-c077-a5d8970bbd2b"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "水曜日は晴れです\n",
+            "水曜日は晴れです\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

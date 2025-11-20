@@ -1,0 +1,197 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOR2Ten9zVA5aHtgyrFRftR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_010%20%E5%95%86%E5%93%81%E8%A9%B3%E7%B4%B0%E7%94%BB%E9%9D%A2%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%97%E3%82%88%E3%81%86Colab%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%BD%9C%E6%88%90%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# crud/views.py\n",
+        "from django.shortcuts import render\n",
+        "from django.views.generic import ListView, DetailView\n",
+        "from .models import Product\n",
+        "\n",
+        "# 既存の一覧表示\n",
+        "class ProductListView(ListView):\n",
+        "    model = Product\n",
+        "    template_name = 'crud/product_list.html'\n",
+        "    context_object_name = 'products'\n",
+        "\n",
+        "# 新規追加：詳細画面\n",
+        "class ProductDetailView(DetailView):\n",
+        "    model = Product\n",
+        "    template_name = 'crud/product_detail.html'\n",
+        "    context_object_name = 'product'"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 561
+        },
+        "id": "XuR6rCmqQgSP",
+        "outputId": "806bb7ba-3ba0-4d5e-d617-247721fcd3cd"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ModuleNotFoundError",
+          "evalue": "No module named 'django'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1193761837.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# crud/views.py\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0mdjango\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mshortcuts\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mrender\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0mdjango\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mviews\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mgeneric\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mListView\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mDetailView\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;34m.\u001b[0m\u001b[0mmodels\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mProduct\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'django'",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ],
+          "errorDetails": {
+            "actions": [
+              {
+                "action": "open_url",
+                "actionText": "Open Examples",
+                "url": "/notebooks/snippets/importing_libraries.ipynb"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# myproject/urls.py\n",
+        "from django.contrib import admin\n",
+        "from django.urls import path\n",
+        "from crud.views import ProductListView, ProductDetailView\n",
+        "\n",
+        "urlpatterns = [\n",
+        "    path('admin/', admin.site.urls),\n",
+        "    path('products/', ProductListView.as_view(), name='product_list'),\n",
+        "    path('products/<int:pk>/', ProductDetailView.as_view(), name='product_detail'),  # 詳細画面\n",
+        "]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 561
+        },
+        "id": "gvHTrKF0QoFW",
+        "outputId": "f533a80a-8391-43f3-d1b7-ce0dbddc9f56"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ModuleNotFoundError",
+          "evalue": "No module named 'django'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1552636152.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# myproject/urls.py\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0mdjango\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcontrib\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0madmin\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0mdjango\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0murls\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mpath\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0mcrud\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mviews\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mProductListView\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mProductDetailView\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'django'",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ],
+          "errorDetails": {
+            "actions": [
+              {
+                "action": "open_url",
+                "actionText": "Open Examples",
+                "url": "/notebooks/snippets/importing_libraries.ipynb"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "<!-- crud/templates/crud/product_list.html -->\n",
+        "<h1>商品一覧</h1>\n",
+        "<ul>\n",
+        "  {% for product in products %}\n",
+        "    <li>\n",
+        "      {{ product.name }} - <a href=\"{% url 'product_detail' product.pk %}\">詳細</a>\n",
+        "    </li>\n",
+        "  {% endfor %}\n",
+        "</ul>"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 112
+        },
+        "id": "VZXzOmr0QtBr",
+        "outputId": "da06aabb-a2e6-4e6d-a879-5a4dc4cf59a6"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (ipython-input-2323250025.py, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-2323250025.py\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    <!-- crud/templates/crud/product_list.html -->\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "<!-- crud/templates/crud/product_detail.html -->\n",
+        "<h1>商品詳細</h1>\n",
+        "\n",
+        "<p><strong>商品名:</strong> {{ product.name }}</p>\n",
+        "<p><strong>価格:</strong> {{ product.price }} 円</p>\n",
+        "<p><strong>在庫:</strong> {{ product.stock }}</p>\n",
+        "\n",
+        "<p><a href=\"{% url 'product_list' %}\">一覧に戻る</a></p>"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 112
+        },
+        "id": "uEfbnug3Q1Fc",
+        "outputId": "e83f49d3-18b8-4c0d-92d8-d8eb5f79611c"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (ipython-input-3193457932.py, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-3193457932.py\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    <!-- crud/templates/crud/product_detail.html -->\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

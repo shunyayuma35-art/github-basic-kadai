@@ -1,0 +1,81 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOhvZnfgMPFuFj+x5XDIh6G",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_011%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97%E5%87%A6%E7%90%86%E3%82%92%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%9D%E3%81%86\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# リストの定義\n",
+        "array = [\"水\",\"金\",\"地\",\"火\",\"木\",\"土\",\"天\",\"海\",\"冥\"]\n",
+        "\n",
+        "# --- for文でリストの中身を出力 ---\n",
+        "for planet in array:\n",
+        "    print(planet)\n",
+        "\n",
+        "# --- while文でリストの中身を出力 ---\n",
+        "i = 0\n",
+        "while i < len(array):\n",
+        "    print(array[i])\n",
+        "    i += 1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j6RhA2xkBCvb",
+        "outputId": "d7bafdb1-d215-439b-d8c0-2ed01a986e40"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "水\n",
+            "金\n",
+            "地\n",
+            "火\n",
+            "木\n",
+            "土\n",
+            "天\n",
+            "海\n",
+            "冥\n",
+            "水\n",
+            "金\n",
+            "地\n",
+            "火\n",
+            "木\n",
+            "土\n",
+            "天\n",
+            "海\n",
+            "冥\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPCqIBoVyNJVSnPR4DIpgca",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/kadai_018%E3%80%80%E5%8F%96%E5%BE%97%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%8C%96%E3%81%97%E3%82%88%E3%81%86\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "SELECT\n",
+        "    age,\n",
+        "    COUNT(*) AS user_count\n",
+        "FROM\n",
+        "    users\n",
+        "GROUP BY\n",
+        "    age\n",
+        "HAVING\n",
+        "    age = 59;"
+      ],
+      "metadata": {
+        "id": "Mp-WKhisJNvz",
+        "outputId": "8138cf85-7e94-42d8-f7bb-df03ce37e33e",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 112
+        }
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "unexpected indent (ipython-input-789858536.py, line 2)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-789858536.py\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    age,\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kadai_018\n",
+        " └── images\n",
+        "      ├── step3-command.png\n",
+        "      └── step3-result.png"
+      ],
+      "metadata": {
+        "id": "hi_CKHroJ5gp",
+        "outputId": "0ffc98f9-ea75-4a72-96ee-9232f203d1d1",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 112
+        }
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "unexpected indent (ipython-input-2606532368.py, line 2)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-2606532368.py\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    └── images\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPffYh+q14QePLI1um9+RXo",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/git-basic-kadai\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 130
+        },
+        "id": "-oM-WJtc5Z0c",
+        "outputId": "cbe3f4fd-2749-4ffa-9943-81d604bc300f"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (ipython-input-1937074408.py, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-1937074408.py\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    mkdir git_challenge\u001b[0m\n\u001b[0m          ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ],
+      "source": [
+        "mkdir git_challenge\n",
+        "cd git_challenge\n",
+        "git init\n",
+        "echo \"\" > hello_world.txt\n",
+        "echo \"Hello, world!\" >> hello_world.txt\n",
+        "git add hello_world.txt\n",
+        "git commit -m \"Add Hello, world!\"\n",
+        "echo \"こんにちは、世界！\" >> hello_world.txt\n",
+        "git add hello_world.txt\n",
+        "git commit -m \"Add Japanese greeting\"\n",
+        "git log"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMuE7yBFT9hGBipmlnb2k1V",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shunyayuma35-art/github-basic-kadai/blob/main/python_basic_kadaikadai_005\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EeDzbSa-OkK3",
+        "outputId": "ef55f6c4-cfe4-434c-9c66-d2a447a3d843"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "75.0cm²\n"
+          ]
+        }
+      ],
+      "source": [
+        "# 台形の辺の長さを変数に代入\n",
+        "top = 10      # 上辺\n",
+        "bottom = 20   # 下辺\n",
+        "height = 5    # 高さ\n",
+        "\n",
+        "# 台形の面積を計算して変数に代入\n",
+        "area = (top + bottom) * height / 2\n",
+        "\n",
+        "# 数値と文字列を結合して出力\n",
+        "print(str(area) + \"cm²\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "0XXXPIWvOzMC"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}

@@ -1,19 +1,26 @@
-# Step1: ローカルリポジトリ作成
-mkdir ~/git_challenge
-cd ~/git_challenge
-git init
+$ mkdir C:\Users\Kyoko\Documents\git_challenge
+$ cd C:\Users\Kyoko\Documents\git_challenge
 
-# Step2: hello_world.txt を作成
-echo "Hello, world!" > hello_world.txt
+$ git init
+Initialized empty Git repository in C:/Users/Kyoko/Documents/git_challenge/.git/
 
-# Step3: 1回目のコミット
-git add hello_world.txt
-git commit -m "1回目: Hello, world! を追加"
+$ echo Hello, world! >> hello_world.txt
 
-# Step4: 2回目の変更とコミット
-echo "こんにちは、世界！" >> hello_world.txt
-git add hello_world.txt
-git commit -m "2回目: こんにちは、世界！を追加"
+$ git add hello_world.txt
 
-# Step5: 変更履歴の確認
-git log --oneline
+$ git commit -m "1回目のコミット: Hello, world!を追加"
+[master (root-commit) xxxxxxx] 1回目のコミット: Hello, world!を追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+$ echo こんにちは、世界！ >> hello_world.txt
+
+$ git add hello_world.txt
+
+$ git commit -m "2回目のコミット: こんにちは、世界！を追加"
+[master xxxxxxx] 2回目のコミット: こんにちは、世界！を追加
+ 1 file changed, 1 insertion(+)
+
+$ git log --oneline
+xxxxxxx 2回目のコミット: こんにちは、世界！を追加
+yyyyyyy 1回目のコミット: Hello, world!を追加

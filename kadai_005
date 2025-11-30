@@ -1,6 +1,6 @@
 # 任意の場所に作業用フォルダを作る
-mkdir C:\Users\あなたのユーザー名\Documents\git_challenge
-cd C:\Users\あなたのユーザー名\Documents\git_challenge
+mkdir C:\Users\Kyoko\Documents\git_challenge
+cd C:\Users\Kyoko\Documents\git_challenge
 
 # Gitリポジトリ初期化
 git init

@@ -1,0 +1,19 @@
+# 任意の場所に作業用フォルダを作る
+mkdir C:\Users\Kyoko\Documents\git_challenge
+cd C:\Users\Kyoko\Documents\git_challenge
+
+# Gitリポジトリ初期化
+git init
+
+# 1回目の内容追加とコミット
+echo Hello, world! >> hello_world.txt
+git add hello_world.txt
+git commit -m "1回目のコミット: Hello, world!を追加"
+
+# 2回目の内容追加とコミット
+echo こんにちは、世界！ >> hello_world.txt
+git add hello_world.txt
+git commit -m "2回目のコミット: こんにちは、世界！を追加"
+
+# 変更履歴の確認
+git log --oneline

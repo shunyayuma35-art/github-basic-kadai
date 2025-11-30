@@ -1,0 +1,15 @@
+# 1. pull_requestブランチ作成＆切り替え
+git branch pull_request
+git checkout pull_request
+
+# 2. hello_world.txtを編集
+# 2行目を「こんばんは、世界！」に変更
+
+# 3. 変更をステージング
+git add hello_world.txt
+
+# 4. コミット
+git commit -m "2行目を変更: こんばんは、世界！"
+
+# 5. リモートにプッシュ
+git push origin pull_request

@@ -1,0 +1,37 @@
+Microsoft Windows [Version 10.0.26100.7171]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\shuny>cd Documents
+
+C:\Users\shuny\Documents>git clone https://github.com/shunyayuma35-art/github-basic-kadai.git
+Cloning into 'github-basic-kadai'...
+remote: Enumerating objects: 274, done.
+remote: Counting objects: 100% (118/118), done.
+remote: Compressing objects: 100% (109/109), done.
+remote: Total 274 (delta 51), reused 0 (delta 0), pack-reused 156 (from 1)
+Receiving objects: 100% (274/274), 200.65 KiB | 1.21 MiB/s, done.
+Resolving deltas: 100% (136/136), done.
+
+C:\Users\shuny\Documents>dir
+ ドライブ C のボリューム ラベルがありません。
+ ボリューム シリアル番号は 0002-BF08 です
+
+ C:\Users\shuny\Documents のディレクトリ
+
+2025/12/01  23:09    <DIR>          .
+2025/11/30  23:09    <DIR>          ..
+2024/05/25  14:22            20,861 2024.5．コピーフローダイアグラム.xlsx
+2025/03/04  18:36            16,310 2025.3.4　検体品仕分け表.xlsx
+2023/12/23  13:09    <DIR>          Corel
+2023/12/23  13:09    <DIR>          Corel Digital Studio SE
+2024/02/23  12:55    <DIR>          Corel PaintShop Pro
+2024/06/12  18:14            20,103 GA 整理表ひながた.docx
+2025/12/01  23:09    <DIR>          github-basic-kadai
+2023/12/25  23:52    <DIR>          Office のカスタム テンプレート
+2023/12/23  14:02    <DIR>          OneNote ノートブック
+2024/03/27  10:43    <DIR>          Zoom
+2024/05/27  21:10           151,766 コピーフローダイアグラム.xlsx
+               4 個のファイル             209,040 バイト
+               9 個のディレクトリ  352,555,532,288 バイトの空き領域
+
+C:\Users\shuny\Documents>

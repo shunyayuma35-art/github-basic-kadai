@@ -1,0 +1,35 @@
+Microsoft Windows [Version 10.0.26100.7171]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\shuny>cd C:\Users\shuny\Documents\kadai_005
+
+C:\Users\shuny\Documents\kadai_005>
+C:\Users\shuny\Documents\kadai_005>git init
+Reinitialized existing Git repository in C:/Users/shuny/Documents/kadai_005/.git/
+
+C:\Users\shuny\Documents\kadai_005>git add kadai_005.txt
+fatal: pathspec 'kadai_005.txt' did not match any files
+
+C:\Users\shuny\Documents\kadai_005>git add kadai_005_history.txt
+
+C:\Users\shuny\Documents\kadai_005>git commit -m "Add command history for kadai_005"
+On branch main
+nothing to commit, working tree clean
+
+C:\Users\shuny\Documents\kadai_005>git remote add origin https://github.com/shunyayuma35-art/github-basic-kadai.git
+error: remote origin already exists.
+
+C:\Users\shuny\Documents\kadai_005>git branch -M main
+
+C:\Users\shuny\Documents\kadai_005>git push -u origin main
+info: please complete authentication in your browser...
+To https://github.com/shunyayuma35-art/github-basic-kadai.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/shunyayuma35-art/github-basic-kadai.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\shuny\Documents\kadai_005>

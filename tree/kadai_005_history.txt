@@ -1,0 +1,76 @@
+Microsoft Windows [Version 10.0.26100.7171]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\shuny>cd Documents
+
+C:\Users\shuny\Documents>mkdir git_challenge
+サブディレクトリまたはファイル git_challenge は既に存在します。
+
+C:\Users\shuny\Documents>cd git_challenge
+
+C:\Users\shuny\Documents\git_challenge>echo Hello > hello_world.txt
+
+C:\Users\shuny\Documents\git_challenge>git init
+Reinitialized existing Git repository in C:/Users/shuny/Documents/git_challenge/.git/
+
+C:\Users\shuny\Documents\git_challenge>git add hello_world.txt
+
+C:\Users\shuny\Documents\git_challenge>git commit -m "Add Hello, world!"
+[main 1739261] Add Hello, world!
+ 1 file changed, 1 deletion(-)
+
+C:\Users\shuny\Documents\git_challenge>echo こんにちは、世界！ >> hello_world.txt
+
+C:\Users\shuny\Documents\git_challenge>git add hello_world.txt
+
+C:\Users\shuny\Documents\git_challenge>git commit -m "Add Japanesegreeting"
+[main 7505e31] Add Japanese greeting
+ 1 file changed, 1 insertion(+)
+
+C:\Users\shuny\Documents\git_challenge>git log
+commit 7505e315dacbd7dafd7cfbe229da0cf3ef723417 (HEAD -> main)
+Author: shunyayuma35-art <shunya.yuma.35@gmail.com>
+Date:   Tue Dec 2 21:32:23 2025 +0900
+
+    Add Japanese greeting
+
+commit 17392616b8aa0cc87f95df9a895938fd95470413
+Author: shunyayuma35-art <shunya.yuma.35@gmail.com>
+Date:   Tue Dec 2 21:31:40 2025 +0900
+
+    Add Hello, world!
+
+commit ec589e727cb56605fe89960b41f6c42cbbf514b2
+Author: shunyayuma35-art <shunya.yuma.35@gmail.com>
+Date:   Tue Dec 2 21:07:32 2025 +0900
+
+    Add Japanese greeting
+
+commit 2affcf56d1edbf39b9b988f0972a0ba450aaa1a9
+Author: shunyayuma35-art <shunya.yuma.35@gmail.com>
+Date:   Tue Dec 2 21:05:57 2025 +0900
+
+    Add Hello, world!
+
+C:\Users\shuny\Documents\git_challenge>cd ..
+
+C:\Users\shuny\Documents>mkdir kadai_005
+サブディレクトリまたはファイル kadai_005 は既に存在します。
+
+C:\Users\shuny\Documents>cd kadai_005
+
+C:\Users\shuny\Documents\kadai_005>notepad kadai_005.txt
+
+C:\Users\shuny\Documents\kadai_005>cd C:\Users\shuny\Documents\kadai_005
+
+C:\Users\shuny\Documents\kadai_005>git init
+Initialized empty Git repository in C:/Users/shuny/Documents/kadai_005/.git/
+
+C:\Users\shuny\Documents\kadai_005>git add kadai_005.txt
+
+C:\Users\shuny\Documents\kadai_005>git commit -m "Add command history for kadai_005"
+[main (root-commit) ba487df] Add command history for kadai_005
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 kadai_005.txt
+
+C:\Users\shuny\Documents\kadai_005>
